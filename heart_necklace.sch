@@ -1450,9 +1450,9 @@
 <label x="-810.26" y="-182.88" size="1.27" layer="95" font="vector" ratio="10" xref="yes"/>
 </segment>
 <segment>
-<pinref part="LED10" gate="G$1" pin="A"/>
-<wire x1="-774.7" y1="-200.66" x2="-772.16" y2="-200.66" width="0.1524" layer="91"/>
-<label x="-774.7" y="-200.66" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
+<pinref part="LED9" gate="G$1" pin="A"/>
+<wire x1="-774.7" y1="-193.04" x2="-772.16" y2="-193.04" width="0.1524" layer="91"/>
+<label x="-774.7" y="-193.04" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LED3" class="0">
@@ -1522,9 +1522,9 @@
 <label x="-810.26" y="-180.34" size="1.27" layer="95" font="vector" ratio="10" xref="yes"/>
 </segment>
 <segment>
-<pinref part="LED9" gate="G$1" pin="A"/>
-<wire x1="-774.7" y1="-193.04" x2="-772.16" y2="-193.04" width="0.1524" layer="91"/>
-<label x="-774.7" y="-193.04" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
+<pinref part="LED10" gate="G$1" pin="A"/>
+<wire x1="-774.7" y1="-200.66" x2="-772.16" y2="-200.66" width="0.1524" layer="91"/>
+<label x="-774.7" y="-200.66" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LED9" class="0">
