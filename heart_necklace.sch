@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.1">
+<eagle version="8.5.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="10" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -67,6 +67,8 @@
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -543,29 +545,6 @@
 <wire x1="1.251" y1="-0.589" x2="1.251" y2="0.589" width="0.1" layer="21"/>
 <wire x1="1.251" y1="0.589" x2="-1.251" y2="0.589" width="0.1" layer="21"/>
 </package>
-<package name="LED_SMD-0402">
-<smd name="A" x="-0.425" y="0" dx="0.6" dy="0.55" layer="1" roundness="50"/>
-<smd name="K" x="0.425" y="0" dx="0.6" dy="0.55" layer="1" roundness="50"/>
-<wire x1="-0.5" y1="-0.25" x2="-0.5" y2="0.25" width="0.05" layer="51"/>
-<wire x1="-0.5" y1="0.25" x2="0.5" y2="0.25" width="0.05" layer="51"/>
-<text x="0.889" y="0.127" size="0.254" layer="25" font="vector" ratio="10" align="center-left">&gt;NAME</text>
-<text x="0.889" y="-0.127" size="0.254" layer="27" font="vector" ratio="10" align="center-left">&gt;VALUE</text>
-<wire x1="0.5" y1="-0.25" x2="-0.5" y2="-0.25" width="0.05" layer="51"/>
-<wire x1="0.5" y1="0.25" x2="0.5" y2="-0.25" width="0.05" layer="51"/>
-<rectangle x1="-0.5" y1="-0.25" x2="-0.3" y2="0.25" layer="51"/>
-<rectangle x1="0.3" y1="-0.25" x2="0.5" y2="0.25" layer="51"/>
-<wire x1="-0.758" y1="0.32" x2="-0.758" y2="-0.32" width="0.05" layer="39"/>
-<wire x1="-0.758" y1="-0.32" x2="0.758" y2="-0.32" width="0.05" layer="39"/>
-<wire x1="0.758" y1="-0.32" x2="0.758" y2="0.32" width="0.05" layer="39"/>
-<wire x1="0.758" y1="0.32" x2="-0.758" y2="0.32" width="0.05" layer="39"/>
-<wire x1="-0.76" y1="0.32" x2="-0.76" y2="-0.32" width="0.05" layer="21"/>
-<wire x1="-0.76" y1="-0.32" x2="0.76" y2="-0.32" width="0.05" layer="21"/>
-<wire x1="0.76" y1="-0.32" x2="0.76" y2="0.32" width="0.05" layer="21"/>
-<wire x1="0.76" y1="0.32" x2="-0.76" y2="0.32" width="0.05" layer="21"/>
-<circle x="-1.016" y="0" radius="0.179603125" width="0" layer="21"/>
-<text x="-0.254" y="0.635" size="0.6096" layer="21" font="vector" ratio="10" align="center">+</text>
-<text x="-0.254" y="-0.508" size="0.6096" layer="21" font="vector" ratio="10" align="center">+</text>
-</package>
 </packages>
 <symbols>
 <symbol name="LED">
@@ -759,60 +738,6 @@
 </technology>
 </technologies>
 </device>
-<device name="_SMD-0402_DISCRETE_RED" package="LED_SMD-0402">
-<connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="K" pad="K"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="CREATOR" value="MrSwirlyEyes" constant="no"/>
-<attribute name="DATASHEET" value="https://www.bivar.com/portals/0/products/SM0402RC.pdf" constant="no"/>
-<attribute name="DIST" value="Digikey" constant="no"/>
-<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=492-2208-1-ND" constant="no"/>
-<attribute name="DISTPN" value="492-2208-1-ND" constant="no"/>
-<attribute name="MFR" value="Bivar Inc." constant="no"/>
-<attribute name="MPN" value="SM0402RC" constant="no"/>
-<attribute name="VALUE" value="RED" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="_SMD-0402_DISCRETE_GREEN" package="LED_SMD-0402">
-<connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="K" pad="K"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="CREATOR" value="MrSwirlyEyes" constant="no"/>
-<attribute name="DATASHEET" value="https://www.bivar.com/portals/0/products/SM0402GC.pdf" constant="no"/>
-<attribute name="DIST" value="Digikey" constant="no"/>
-<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=492-2205-1-ND" constant="no"/>
-<attribute name="DISTPN" value="492-2205-1-ND" constant="no"/>
-<attribute name="MFR" value="Bivar Inc." constant="no"/>
-<attribute name="MPN" value="SM0402GC" constant="no"/>
-<attribute name="VALUE" value="GREEN" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="_SMD-0402_DISCRETE_BLUE" package="LED_SMD-0402">
-<connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="K" pad="K"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="CREATOR" value="MrSwirlyEyes" constant="no"/>
-<attribute name="DATASHEET" value="https://www.bivar.com/portals/0/products/SM0402BWC.pdf" constant="no"/>
-<attribute name="DIST" value="Digikey" constant="no"/>
-<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=492-2203-1-ND" constant="no"/>
-<attribute name="DISTPN" value="492-2203-1-ND" constant="no"/>
-<attribute name="MFR" value="Bivar Inc." constant="no"/>
-<attribute name="MPN" value="SM0402BWC" constant="no"/>
-<attribute name="VALUE" value="BLUE" constant="no"/>
-</technology>
-</technologies>
-</device>
 </devices>
 </deviceset>
 </devicesets>
@@ -828,6 +753,12 @@
 <wire x1="-1.397" y1="-0.508" x2="1.397" y2="-0.508" width="0.254" layer="94"/>
 <wire x1="-0.889" y1="-1.016" x2="0.889" y2="-1.016" width="0.254" layer="94"/>
 </symbol>
+<symbol name="VCC">
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<pin name="VCC" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="0" y="2.794" size="1.27" layer="96" font="vector" ratio="10" align="bottom-center">VCC</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="SUPPLY">
@@ -842,64 +773,14 @@
 </device>
 </devices>
 </deviceset>
-</devicesets>
-</library>
-<library name="PiB">
-<packages>
-<package name="BATTERY_COINCELL-20MM-PTH">
-<wire x1="-3.75" y1="10.5" x2="-3.75" y2="14" width="0.2032" layer="21"/>
-<wire x1="-3.75" y1="14" x2="3.75" y2="14" width="0.2032" layer="21"/>
-<wire x1="3.75" y1="14" x2="3.75" y2="10.5" width="0.2032" layer="21"/>
-<circle x="-0.1" y="0.06" radius="10" width="0.127" layer="51"/>
-<pad name="-" x="0" y="-7.465" drill="1.195" diameter="2.395" rot="R180"/>
-<pad name="+" x="0" y="12.535" drill="1.525" diameter="2.725" rot="R180"/>
-<circle x="0" y="0" radius="11.175" width="0.3" layer="21"/>
-<text x="0.254" y="-5.588" size="1.778" layer="21" font="vector" ratio="10" align="center">-</text>
-<text x="0.254" y="8.89" size="1.778" layer="21" font="vector" ratio="10" align="center">+</text>
-<text x="0" y="0.635" size="0.6096" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-0.635" size="0.6096" layer="28" font="vector" ratio="10" align="top-center">&gt;VALUE</text>
-</package>
-</packages>
-<symbols>
-<symbol name="BATTERY_CELL">
-<wire x1="3.81" y1="0" x2="-3.81" y2="0" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.4064" layer="94"/>
-<wire x1="0" y1="-1.524" x2="0" y2="-2.54" width="0.1524" layer="94"/>
-<pin name="-" x="0" y="-5.08" visible="off" length="short" direction="pwr" rot="R90"/>
-<pin name="+" x="0" y="2.54" visible="off" length="short" direction="pwr" rot="R270"/>
-<text x="0.254" y="0.254" size="0.8128" layer="95" font="vector" ratio="10">&gt;NAME</text>
-<text x="0.254" y="-1.524" size="0.8128" layer="96" font="vector" ratio="10" align="top-left">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="BATTERY_CELL" prefix="BATT" uservalue="yes">
+<deviceset name="VCC" prefix="SUPPLY">
 <gates>
-<gate name="G$1" symbol="BATTERY_CELL" x="0" y="0"/>
+<gate name="VCC" symbol="VCC" x="0" y="0"/>
 </gates>
 <devices>
-<device name="_COINCELL-CR2032-20MM_PTH" package="BATTERY_COINCELL-20MM-PTH">
-<connects>
-<connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
+<device name="">
 <technologies>
-<technology name="">
-<attribute name="CREATOR" value="MrSwirlyEyes" constant="no"/>
-<attribute name="DATASHEET" value="https://media.digikey.com/pdf/Data%20Sheets/Panasonic%20Inustrial/CR_Series.pdf" constant="no"/>
-<attribute name="DATASHEET_CONNECTOR" value="http://www.memoryprotectiondevices.com/datasheets/BS-7-datasheet.pdf" constant="no"/>
-<attribute name="DIST" value="Digikey" constant="no"/>
-<attribute name="DISTLINK" value="https://www.digikey.com/product-detail/en/panasonic-bsg/CR2032/P189-ND/31939" constant="no"/>
-<attribute name="DISTLINK_CONNECTOR" value="https://www.digikey.com/product-detail/en/mpd-memory-protection-devices/BS-7/BS-7-ND/389447" constant="no"/>
-<attribute name="DISTPN" value="P189-ND" constant="no"/>
-<attribute name="DISTPN_CONNECTOR" value="BS-7-ND" constant="no"/>
-<attribute name="DIST_CONNECTOR" value="Digikey" constant="no"/>
-<attribute name="MFR" value="Panasonic - BSG" constant="no"/>
-<attribute name="MFR_CONNECTOR" value="MPD (Memory Protection Devices)" constant="no"/>
-<attribute name="MPN" value="CR2032" constant="no"/>
-<attribute name="MPN_CONNECTOR" value="BS-7" constant="no"/>
-<attribute name="TESTED" value="NO" constant="no"/>
-<attribute name="VALUE" value="3V/CR2032" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -980,6 +861,27 @@
 <wire x1="-3.81" y1="6.858" x2="3.81" y2="6.858" width="0.127" layer="39"/>
 <text x="-2.54" y="0" size="0.8128" layer="25" font="vector" ratio="10" rot="R90" align="center">&gt;NAME</text>
 </package>
+<package name="SW_SLIDE_SPST_VERT_8.5L-3.5W">
+<wire x1="-4.25" y1="1.75" x2="4.25" y2="1.75" width="0.127" layer="21"/>
+<wire x1="4.25" y1="1.75" x2="4.25" y2="-1.75" width="0.127" layer="21"/>
+<wire x1="4.25" y1="-1.75" x2="-4.25" y2="-1.75" width="0.127" layer="21"/>
+<wire x1="-4.25" y1="-1.75" x2="-4.25" y2="1.75" width="0.127" layer="21"/>
+<hole x="3.4" y="0" drill="0.9"/>
+<hole x="-3.4" y="0" drill="0.9"/>
+<smd name="2" x="0" y="2.2" dx="1.2" dy="1.4" layer="1" roundness="50"/>
+<smd name="1" x="-2.5" y="-2.2" dx="1.2" dy="1.4" layer="1" roundness="50"/>
+<smd name="3" x="2.5" y="-2.2" dx="1.2" dy="1.4" layer="1" roundness="50"/>
+<wire x1="-1.5" y1="0.75" x2="-1.5" y2="-0.75" width="0.127" layer="51"/>
+<wire x1="-1.5" y1="-0.75" x2="1.5" y2="-0.75" width="0.127" layer="51"/>
+<wire x1="1.5" y1="-0.75" x2="1.5" y2="0.75" width="0.127" layer="51"/>
+<wire x1="1.5" y1="0.75" x2="-1.5" y2="0.75" width="0.127" layer="51"/>
+<rectangle x1="-1.5" y1="-0.75" x2="0" y2="0.75" layer="51"/>
+<wire x1="-2.5" y1="0" x2="-1.5" y2="0" width="0.127" layer="21"/>
+<wire x1="2.5" y1="0" x2="1.5" y2="0" width="0.127" layer="21"/>
+<circle x="1.5" y="0" radius="0.316225" width="0" layer="21"/>
+<circle x="-1.5" y="0" radius="0.316225" width="0" layer="21"/>
+<wire x1="-1.5" y1="0" x2="1.5" y2="1" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SWITCH_SPDT">
@@ -1058,6 +960,25 @@
 <attribute name="MPN" value="100SP1T1B4M2QE" constant="no"/>
 <attribute name="TESTED" value="NO" constant="no"/>
 <attribute name="VALUE" value="5A/28V" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_VERT_SMD_200MA-12V_8.5L-3.5W" package="SW_SLIDE_SPST_VERT_8.5L-3.5W">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="CREATOR" value="MrSwirlyEyes" constant="no"/>
+<attribute name="DATASHEET" value="https://www.nidec-copal-electronics.com/e/catalog/switch/cl-sb.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=563-1318-1-ND" constant="no"/>
+<attribute name="DISTPN" value="563-1318-1-ND" constant="no"/>
+<attribute name="MFR" value="  Nidec Copal Electronics" constant="no"/>
+<attribute name="MPN" value="CL-SB-12B-01T" constant="no"/>
+<attribute name="VALUE" value="200mA/12V" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1154,26 +1075,6 @@
 <wire x1="1.551" y1="-0.589" x2="1.551" y2="0.589" width="0.1" layer="21"/>
 <wire x1="1.551" y1="0.589" x2="-1.551" y2="0.589" width="0.1" layer="21"/>
 </package>
-<package name="RESISTOR_SMD-0402">
-<smd name="1" x="-0.425" y="0" dx="0.6" dy="0.55" layer="1" roundness="50"/>
-<smd name="2" x="0.425" y="0" dx="0.6" dy="0.55" layer="1" roundness="50"/>
-<wire x1="-0.5" y1="-0.25" x2="-0.5" y2="0.25" width="0.05" layer="51"/>
-<wire x1="-0.5" y1="0.25" x2="0.5" y2="0.25" width="0.05" layer="51"/>
-<text x="-0.889" y="0.127" size="0.254" layer="25" font="vector" ratio="10" rot="R180" align="center-left">&gt;NAME</text>
-<text x="-0.889" y="-0.127" size="0.254" layer="27" font="vector" ratio="10" rot="R180" align="center-left">&gt;VALUE</text>
-<wire x1="0.5" y1="-0.25" x2="-0.5" y2="-0.25" width="0.05" layer="51"/>
-<wire x1="0.5" y1="0.25" x2="0.5" y2="-0.25" width="0.05" layer="51"/>
-<rectangle x1="-0.5" y1="-0.25" x2="-0.3" y2="0.25" layer="51"/>
-<rectangle x1="0.3" y1="-0.25" x2="0.5" y2="0.25" layer="51"/>
-<wire x1="-0.758" y1="0.32" x2="-0.758" y2="-0.32" width="0.05" layer="39"/>
-<wire x1="-0.758" y1="-0.32" x2="0.758" y2="-0.32" width="0.05" layer="39"/>
-<wire x1="0.758" y1="-0.32" x2="0.758" y2="0.32" width="0.05" layer="39"/>
-<wire x1="0.758" y1="0.32" x2="-0.758" y2="0.32" width="0.05" layer="39"/>
-<wire x1="-0.76" y1="0.32" x2="-0.76" y2="-0.32" width="0.05" layer="21"/>
-<wire x1="-0.76" y1="-0.32" x2="0.76" y2="-0.32" width="0.05" layer="21"/>
-<wire x1="0.76" y1="-0.32" x2="0.76" y2="0.32" width="0.05" layer="21"/>
-<wire x1="0.76" y1="0.32" x2="-0.76" y2="0.32" width="0.05" layer="21"/>
-</package>
 </packages>
 <symbols>
 <symbol name="RESISTOR">
@@ -1232,10 +1133,6 @@
 </technologies>
 </device>
 <device name="_SMD-0603_1/10W-5%" package="RESISTOR_SMD-603">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
 <technologies>
 <technology name="">
 <attribute name="CREATOR" value="MrSwirlyEyes" constant="no"/>
@@ -1249,22 +1146,269 @@
 </technology>
 </technologies>
 </device>
-<device name="_SMD-0402_1/16W-5%" package="RESISTOR_SMD-0402">
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="PiB_batteries">
+<packages>
+<package name="BR-1225">
+<smd name="-" x="0" y="0" dx="4" dy="4" layer="1" roundness="50"/>
+<smd name="+_2" x="7.75" y="0" dx="3.5" dy="3.6" layer="1" roundness="50"/>
+<smd name="+_1" x="-7.75" y="0" dx="3.5" dy="3.6" layer="1" roundness="50"/>
+<wire x1="-9.5" y1="1.6" x2="-9.5" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="-9.5" y1="-1.6" x2="-6.6" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="-9.5" y1="1.6" x2="-6.6" y2="1.6" width="0.127" layer="21"/>
+<circle x="-8.05" y="0" radius="0.75" width="0.127" layer="51"/>
+<wire x1="-6.6" y1="-4.9" x2="6.6" y2="-4.9" width="0.127" layer="21"/>
+<wire x1="0" y1="2.9" x2="4" y2="6.9" width="0.127" layer="21"/>
+<wire x1="0" y1="2.9" x2="-4" y2="6.9" width="0.127" layer="21"/>
+<wire x1="-4" y1="6.9" x2="-6.6" y2="4.3" width="0.127" layer="21"/>
+<wire x1="4" y1="6.9" x2="6.6" y2="4.3" width="0.127" layer="21"/>
+<wire x1="-6.6" y1="4.3" x2="-6.6" y2="1.6" width="0.127" layer="21"/>
+<circle x="8.05" y="0" radius="0.75" width="0.127" layer="51"/>
+<wire x1="6.6" y1="-1.6" x2="9.5" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="9.5" y1="-1.6" x2="9.5" y2="1.6" width="0.127" layer="21"/>
+<wire x1="9.5" y1="1.6" x2="6.6" y2="1.6" width="0.127" layer="21"/>
+<wire x1="6.6" y1="4.3" x2="6.6" y2="1.6" width="0.127" layer="21"/>
+<wire x1="-6.6" y1="-4.9" x2="-6.6" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="6.6" y1="-4.9" x2="6.6" y2="-1.6" width="0.127" layer="21"/>
+<text x="0" y="7.3" size="0.5" layer="25" font="vector" ratio="10" align="center">&gt;NAME</text>
+<text x="0" y="6.7" size="0.32" layer="27" font="vector" ratio="10" align="center">&gt;VALUE</text>
+<wire x1="0" y1="6.25" x2="-6.25" y2="0" width="0.127" layer="51" style="shortdash" curve="90"/>
+<wire x1="-6.25" y1="0" x2="-0.127" y2="-6.25" width="0.127" layer="51" style="shortdash" curve="90"/>
+<wire x1="-0.127" y1="-6.25" x2="0.127" y2="-6.25" width="0.127" layer="51" style="shortdash"/>
+<wire x1="0.127" y1="-6.25" x2="6.25" y2="0" width="0.127" layer="51" style="shortdash" curve="90"/>
+<wire x1="6.25" y1="0" x2="0" y2="6.25" width="0.127" layer="51" style="shortdash" curve="90"/>
+</package>
+</packages>
+<symbols>
+<symbol name="BATTERY_CELL">
+<wire x1="5.08" y1="0" x2="-5.08" y2="0" width="0.508" layer="94"/>
+<text x="0.508" y="0.508" size="1.778" layer="94">+</text>
+<text x="2.54" y="2.54" size="1.27" layer="95" font="vector" ratio="10" align="center-left">&gt;NAME</text>
+<wire x1="2.54" y1="-1.524" x2="0" y2="-1.524" width="0.508" layer="94"/>
+<text x="0.508" y="-2.032" size="1.778" layer="94" rot="MR180">-</text>
+<pin name="-" x="0" y="-5.08" visible="off" length="short" rot="R90"/>
+<pin name="+" x="0" y="2.54" visible="off" length="short" rot="R270"/>
+<wire x1="0" y1="-1.524" x2="-2.54" y2="-1.524" width="0.508" layer="94"/>
+<wire x1="0" y1="-1.524" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<text x="2.54" y="-3.81" size="0.8128" layer="96" font="vector" ratio="10" align="center-left">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BATTERY_COIN-CELL" prefix="BATT" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="BATTERY_CELL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_SMD_3V_12.5MM" package="BR-1225">
 <connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="+" pad="+_1 +_2"/>
+<connect gate="G$1" pin="-" pad="-"/>
 </connects>
 <technologies>
 <technology name="">
 <attribute name="CREATOR" value="MrSwirlyEyes" constant="no"/>
-<attribute name="DATASHEET" value="http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_8.pdf" constant="no"/>
+<attribute name="DATASHEET" value="https://cdn.harwin.com/pdfs/S8201R.pdf" constant="no"/>
+<attribute name="DATASHEET_BATTERY" value="https://industrial.panasonic.com/cdbs/www-data/pdf2/AAD4000/AAD4000C2.pdf" constant="no"/>
 <attribute name="DIST" value="Digikey" constant="no"/>
-<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=311-1.0KJRCT-ND" constant="no"/>
-<attribute name="DISTPN" value="311-1.0KJRCT-ND" constant="no"/>
-<attribute name="MFR" value="Yageo" constant="no"/>
-<attribute name="MPN" value="RC0402JR-071KL" constant="no"/>
-<attribute name="VALUE" value="1KΩ" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=952-1662-1-ND" constant="no"/>
+<attribute name="DISTLINK_BATTERY" value="https://www.digikey.com/products/en?keywords=P183-ND" constant="no"/>
+<attribute name="DISTPN" value="952-1662-1-ND" constant="no"/>
+<attribute name="DISTPN_BATTERY" value="P183-ND" constant="no"/>
+<attribute name="DIST_BATTERY" value="Digikey" constant="no"/>
+<attribute name="MFR" value="Harwin Inc." constant="no"/>
+<attribute name="MFR_BATTERY" value="Panasonic - BSG" constant="no"/>
+<attribute name="MPN" value="S8201-46R" constant="no"/>
+<attribute name="MPN_BATTERY" value="BR-1225" constant="no"/>
+<attribute name="VALUE" value="BR-1225/3V/48mAh" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="PiB_connectors">
+<packages>
+<package name="2X3-NS">
+<rectangle x1="-0.254" y1="-1.524" x2="0.254" y2="-1.016" layer="51"/>
+<rectangle x1="-0.254" y1="1.016" x2="0.254" y2="1.524" layer="51"/>
+<wire x1="-0.635" y1="-2.54" x2="0.635" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="2.54" x2="0.635" y2="2.54" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="-1.905" x2="-0.635" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="1.905" x2="-0.635" y2="2.54" width="0.2032" layer="51"/>
+<wire x1="-1.27" y1="1.905" x2="-1.27" y2="-1.905" width="0.2032" layer="21"/>
+<wire x1="-1.905" y1="-2.54" x2="-1.27" y2="-1.905" width="0.2032" layer="21"/>
+<wire x1="-1.905" y1="2.54" x2="-1.27" y2="1.905" width="0.2032" layer="21"/>
+<rectangle x1="-2.794" y1="-1.524" x2="-2.286" y2="-1.016" layer="51"/>
+<rectangle x1="-2.794" y1="1.016" x2="-2.286" y2="1.524" layer="51"/>
+<wire x1="-3.175" y1="-2.54" x2="-1.905" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="-3.175" y1="2.54" x2="-1.905" y2="2.54" width="0.2032" layer="21"/>
+<wire x1="-3.81" y1="-1.905" x2="-3.175" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="-3.81" y1="-1.905" x2="-3.81" y2="1.905" width="0.2032" layer="21"/>
+<text x="4.318" y="0" size="0.6096" layer="27" font="vector" ratio="10" rot="R90" align="center">&gt;VALUE</text>
+<wire x1="-3.81" y1="1.905" x2="-3.175" y2="2.54" width="0.2032" layer="21"/>
+<text x="-4.445" y="0" size="0.8128" layer="25" font="vector" ratio="10" rot="R90" align="center">&gt;NAME</text>
+<wire x1="0.635" y1="-2.54" x2="1.27" y2="-1.905" width="0.2032" layer="21"/>
+<wire x1="0.635" y1="2.54" x2="1.27" y2="1.905" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="-1.905" x2="1.905" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="1.905" x2="1.27" y2="-1.905" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="1.905" x2="1.905" y2="2.54" width="0.2032" layer="21"/>
+<wire x1="1.905" y1="-2.54" x2="3.175" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="1.905" y1="2.54" x2="3.175" y2="2.54" width="0.2032" layer="21"/>
+<rectangle x1="2.286" y1="-1.524" x2="2.794" y2="-1.016" layer="51"/>
+<rectangle x1="2.286" y1="1.016" x2="2.794" y2="1.524" layer="51"/>
+<wire x1="3.175" y1="-2.54" x2="3.81" y2="-1.905" width="0.2032" layer="21"/>
+<wire x1="3.175" y1="2.54" x2="3.81" y2="1.905" width="0.2032" layer="21"/>
+<wire x1="3.81" y1="1.905" x2="3.81" y2="-1.905" width="0.2032" layer="21"/>
+<pad name="1" x="-2.54" y="-1.27" drill="1.016" diameter="1.8796" shape="octagon"/>
+<pad name="2" x="-2.54" y="1.27" drill="1.016" diameter="1.8796" shape="octagon"/>
+<pad name="3" x="0" y="-1.27" drill="1.016" diameter="1.8796" shape="octagon"/>
+<pad name="4" x="0" y="1.27" drill="1.016" diameter="1.8796" shape="octagon"/>
+<pad name="5" x="2.54" y="-1.27" drill="1.016" diameter="1.8796" shape="octagon"/>
+<pad name="6" x="2.54" y="1.27" drill="1.016" diameter="1.8796" shape="octagon"/>
+<wire x1="-3.992" y1="2.746" x2="3.992" y2="2.746" width="0.127" layer="39"/>
+<wire x1="3.992" y1="2.746" x2="3.992" y2="-2.746" width="0.127" layer="39"/>
+<wire x1="3.992" y1="-2.746" x2="-3.992" y2="-2.746" width="0.127" layer="39"/>
+<wire x1="-3.992" y1="-2.746" x2="-3.992" y2="2.746" width="0.127" layer="39"/>
+<text x="-2.54" y="-3.048" size="0.6096" layer="21" font="vector" ratio="10" align="center">MISO</text>
+<text x="0" y="-3.048" size="0.6096" layer="21" font="vector" ratio="10" align="center">SCK</text>
+<text x="2.54" y="-3.048" size="0.6096" layer="21" font="vector" ratio="10" align="center">RESET</text>
+<text x="2.54" y="3.048" size="0.6096" layer="21" font="vector" ratio="10" align="center">GND</text>
+<text x="-2.54" y="3.048" size="0.6096" layer="21" font="vector" ratio="10" align="center">VCC</text>
+<text x="0" y="3.048" size="0.6096" layer="21" font="vector" ratio="10" align="center">MOSI</text>
+</package>
+<package name="2X3-NS-PAD">
+<wire x1="-0.635" y1="-2.54" x2="0.635" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="2.54" x2="0.635" y2="2.54" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="-1.905" x2="-0.635" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="1.905" x2="-0.635" y2="2.54" width="0.2032" layer="51"/>
+<wire x1="-1.27" y1="1.905" x2="-1.27" y2="-1.905" width="0.2032" layer="21"/>
+<wire x1="-1.905" y1="-2.54" x2="-1.27" y2="-1.905" width="0.2032" layer="21"/>
+<wire x1="-1.905" y1="2.54" x2="-1.27" y2="1.905" width="0.2032" layer="21"/>
+<wire x1="-3.175" y1="-2.54" x2="-1.905" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="-3.175" y1="2.54" x2="-1.905" y2="2.54" width="0.2032" layer="21"/>
+<wire x1="-3.81" y1="-1.905" x2="-3.175" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="-3.81" y1="-1.905" x2="-3.81" y2="1.905" width="0.2032" layer="21"/>
+<text x="4.318" y="0" size="0.6096" layer="27" font="vector" ratio="10" rot="R90" align="center">&gt;VALUE</text>
+<wire x1="-3.81" y1="1.905" x2="-3.175" y2="2.54" width="0.2032" layer="21"/>
+<text x="-4.445" y="0" size="0.8128" layer="25" font="vector" ratio="10" rot="R90" align="center">&gt;NAME</text>
+<wire x1="0.635" y1="-2.54" x2="1.27" y2="-1.905" width="0.2032" layer="21"/>
+<wire x1="0.635" y1="2.54" x2="1.27" y2="1.905" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="-1.905" x2="1.905" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="1.905" x2="1.27" y2="-1.905" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="1.905" x2="1.905" y2="2.54" width="0.2032" layer="21"/>
+<wire x1="1.905" y1="-2.54" x2="3.175" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="1.905" y1="2.54" x2="3.175" y2="2.54" width="0.2032" layer="21"/>
+<wire x1="3.175" y1="-2.54" x2="3.81" y2="-1.905" width="0.2032" layer="21"/>
+<wire x1="3.175" y1="2.54" x2="3.81" y2="1.905" width="0.2032" layer="21"/>
+<wire x1="3.81" y1="1.905" x2="3.81" y2="-1.905" width="0.2032" layer="21"/>
+<wire x1="-3.992" y1="2.746" x2="3.992" y2="2.746" width="0.127" layer="39"/>
+<wire x1="3.992" y1="2.746" x2="3.992" y2="-2.746" width="0.127" layer="39"/>
+<wire x1="3.992" y1="-2.746" x2="-3.992" y2="-2.746" width="0.127" layer="39"/>
+<wire x1="-3.992" y1="-2.746" x2="-3.992" y2="2.746" width="0.127" layer="39"/>
+<text x="-2.54" y="-3.048" size="0.6096" layer="21" font="vector" ratio="10" align="center">MISO</text>
+<text x="0" y="-3.048" size="0.6096" layer="21" font="vector" ratio="10" align="center">SCK</text>
+<text x="2.54" y="-3.048" size="0.6096" layer="21" font="vector" ratio="10" align="center">RESET</text>
+<text x="2.54" y="3.048" size="0.6096" layer="21" font="vector" ratio="10" align="center">GND</text>
+<text x="-2.54" y="3.048" size="0.6096" layer="21" font="vector" ratio="10" align="center">VCC</text>
+<text x="0" y="3.048" size="0.6096" layer="21" font="vector" ratio="10" align="center">MOSI</text>
+<smd name="1" x="-2.54" y="-1.27" dx="1.8796" dy="1.8796" layer="1" roundness="100"/>
+<smd name="2" x="-2.54" y="1.27" dx="1.8796" dy="1.8796" layer="1" roundness="100"/>
+<smd name="3" x="0" y="-1.27" dx="1.8796" dy="1.8796" layer="1" roundness="100"/>
+<smd name="4" x="0" y="1.27" dx="1.8796" dy="1.8796" layer="1" roundness="100"/>
+<smd name="5" x="2.54" y="-1.27" dx="1.8796" dy="1.8796" layer="1" roundness="100"/>
+<smd name="6" x="2.54" y="1.27" dx="1.8796" dy="1.8796" layer="1" roundness="100"/>
+</package>
+</packages>
+<symbols>
+<symbol name="AVR_SPI_PROGRAMMER_6">
+<text x="-4.572" y="3.048" size="0.8128" layer="97" font="vector" ratio="10">MISO</text>
+<text x="0" y="5.842" size="0.8128" layer="95" font="vector" ratio="10" align="center">&gt;NAME</text>
+<wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="-5.08" y1="5.08" x2="-5.08" y2="2.54" width="0.4064" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="0" width="0.4064" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-5.08" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="5.08" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="5.08" y2="0" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="0" x2="5.08" y2="2.54" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="-5.08" y2="5.08" width="0.4064" layer="94"/>
+<pin name="1" x="-7.62" y="2.54" visible="pad" length="short" direction="pas"/>
+<pin name="2" x="7.62" y="2.54" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="3" x="-7.62" y="0" visible="pad" length="short" direction="pas"/>
+<pin name="4" x="7.62" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="5" x="-7.62" y="-2.54" visible="pad" length="short" direction="pas"/>
+<pin name="6" x="7.62" y="-2.54" visible="pad" length="short" direction="pas" rot="R180"/>
+<text x="0" y="-5.842" size="0.6096" layer="96" font="vector" ratio="10" align="center">&gt;VALUE</text>
+<wire x1="-3.175" y1="2.54" x2="-2.54" y2="2.54" width="0.6096" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-1.905" y2="2.54" width="0.6096" layer="94"/>
+<wire x1="-3.175" y1="0" x2="-2.54" y2="0" width="0.6096" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.905" y2="0" width="0.6096" layer="94"/>
+<wire x1="-3.175" y1="-2.54" x2="-2.54" y2="-2.54" width="0.6096" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-1.905" y2="-2.54" width="0.6096" layer="94"/>
+<wire x1="1.905" y1="-2.54" x2="2.54" y2="-2.54" width="0.6096" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="3.175" y2="-2.54" width="0.6096" layer="94"/>
+<wire x1="1.905" y1="0" x2="2.54" y2="0" width="0.6096" layer="94"/>
+<wire x1="2.54" y1="0" x2="3.175" y2="0" width="0.6096" layer="94"/>
+<wire x1="1.905" y1="2.54" x2="2.54" y2="2.54" width="0.6096" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="3.175" y2="2.54" width="0.6096" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-5.08" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-5.08" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<text x="-4.572" y="0.508" size="0.8128" layer="97" font="vector" ratio="10">SCK</text>
+<text x="-4.572" y="-2.032" size="0.8128" layer="97" font="vector" ratio="10">RESET</text>
+<text x="4.572" y="3.048" size="0.8128" layer="97" font="vector" ratio="10" align="bottom-right">VCC</text>
+<text x="4.572" y="0.508" size="0.8128" layer="97" font="vector" ratio="10" align="bottom-right">MOSI</text>
+<text x="4.572" y="-2.032" size="0.8128" layer="97" font="vector" ratio="10" align="bottom-right">GND</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="AVR_SPI_PRG_6" prefix="AVR_ISP" uservalue="yes">
+<description>&lt;b&gt;AVR ISP 6 Pin&lt;/b&gt;
+This is the reduced ISP connector for AVR programming. Common on Arduino. This footprint will take up less PCB space and can be used with a 10-pin to 6-pin adapter such as SKU: BOB-08508</description>
+<gates>
+<gate name="G$1" symbol="AVR_SPI_PROGRAMMER_6" x="0" y="0"/>
+</gates>
+<devices>
+<device name="NS" package="2X3-NS">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://portal.fciconnect.com/Comergent//fci/drawing/67996.pdf"/>
+<attribute name="DIST" value="Digikey"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=609-3234-ND" constant="no"/>
+<attribute name="DISTPN" value="609-3234-ND"/>
+<attribute name="MFR" value="Amphenol FCI"/>
+<attribute name="MPN" value="67997-206HLF"/>
+<attribute name="VALUE" value="AVR ISP" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="NS-PAD" package="2X3-NS-PAD">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -1305,14 +1449,16 @@
 <part name="MCU1" library="PiB_ic_microcontrollers" deviceset="ATTINY84" device="_SO-14" value="ATTINY84"/>
 <part name="SW1" library="PiB_switches" deviceset="SWITCH_SPDT" device="_RA_SMD_300MA-4V_6.7L-2.6W" value="300mA/4V"/>
 <part name="GND1" library="PiB_power_symbols" deviceset="GND" device=""/>
-<part name="BATT1" library="PiB" deviceset="BATTERY_CELL" device="_COINCELL-CR2032-20MM_PTH" value="3V/CR2032"/>
 <part name="GND3" library="PiB_power_symbols" deviceset="GND" device=""/>
+<part name="BATT2" library="PiB_batteries" deviceset="BATTERY_COIN-CELL" device="_SMD_3V_12.5MM" value="BR-1225/3V/48mAh"/>
+<part name="AVR_ISP1" library="PiB_connectors" deviceset="AVR_SPI_PRG_6" device="NS-PAD"/>
+<part name="SUPPLY1" library="PiB_power_symbols" deviceset="GND" device=""/>
+<part name="SUPPLY2" library="PiB_power_symbols" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="-812.8" y="-177.8" size="1.27" layer="97" font="vector" ratio="10">NC</text>
-<text x="-812.8" y="-185.42" size="1.27" layer="97" font="vector" ratio="10">NC</text>
 <wire x1="-787.4" y1="-124.46" x2="-787.4" y2="-213.36" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-787.4" y1="-213.36" x2="-741.68" y2="-213.36" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-741.68" y1="-213.36" x2="-741.68" y2="-124.46" width="0.1524" layer="97" style="shortdash"/>
@@ -1324,6 +1470,10 @@
 <wire x1="-797.56" y1="-144.78" x2="-914.4" y2="-144.78" width="0.1524" layer="97" style="shortdash"/>
 <text x="-853.44" y="-142.24" size="7.62" layer="97" font="vector" ratio="20" align="bottom-center">ATTINY84</text>
 <text x="-896.62" y="-152.4" size="1.27" layer="97" font="vector" ratio="10" rot="MR0">NC</text>
+<text x="-800.1" y="-165.1" size="1.27" layer="91" font="vector" ratio="10">SCK</text>
+<text x="-800.1" y="-167.64" size="1.27" layer="91" font="vector" ratio="10">MISO</text>
+<text x="-800.1" y="-170.18" size="1.27" layer="91" font="vector" ratio="10">MOSI</text>
+<text x="-800.1" y="-185.42" size="1.27" layer="91" font="vector" ratio="10">!RESET</text>
 </plain>
 <instances>
 <instance part="LED3" gate="G$1" x="-769.62" y="-147.32" rot="R90"/>
@@ -1350,8 +1500,11 @@
 <instance part="MCU1" gate="G$1" x="-848.36" y="-170.18"/>
 <instance part="SW1" gate="G$1" x="-891.54" y="-154.94" rot="R180"/>
 <instance part="GND1" gate="GND" x="-749.3" y="-205.74"/>
-<instance part="BATT1" gate="G$1" x="-904.24" y="-162.56"/>
 <instance part="GND3" gate="GND" x="-886.46" y="-190.5"/>
+<instance part="BATT2" gate="G$1" x="-904.24" y="-162.56"/>
+<instance part="AVR_ISP1" gate="G$1" x="-853.44" y="-218.44"/>
+<instance part="SUPPLY1" gate="GND" x="-843.28" y="-226.06"/>
+<instance part="SUPPLY2" gate="VCC" x="-843.28" y="-213.36"/>
 </instances>
 <busses>
 </busses>
@@ -1360,7 +1513,7 @@
 <segment>
 <pinref part="GND2" gate="GND" pin="GND"/>
 <wire x1="-904.24" y1="-167.64" x2="-904.24" y2="-170.18" width="0.1524" layer="91"/>
-<pinref part="BATT1" gate="G$1" pin="-"/>
+<pinref part="BATT2" gate="G$1" pin="-"/>
 </segment>
 <segment>
 <wire x1="-749.3" y1="-132.08" x2="-749.3" y2="-139.7" width="0.1524" layer="91"/>
@@ -1410,13 +1563,19 @@
 <pinref part="MCU1" gate="G$1" pin="GND"/>
 <wire x1="-886.46" y1="-185.42" x2="-883.92" y2="-185.42" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="AVR_ISP1" gate="G$1" pin="6"/>
+<wire x1="-845.82" y1="-220.98" x2="-843.28" y2="-220.98" width="0.1524" layer="91"/>
+<wire x1="-843.28" y1="-220.98" x2="-843.28" y2="-223.52" width="0.1524" layer="91"/>
+<pinref part="SUPPLY1" gate="GND" pin="GND"/>
+</segment>
 </net>
 <net name="VBATT" class="0">
 <segment>
-<pinref part="BATT1" gate="G$1" pin="+"/>
 <wire x1="-904.24" y1="-160.02" x2="-904.24" y2="-157.48" width="0.1524" layer="91"/>
 <pinref part="SW1" gate="G$1" pin="1"/>
 <wire x1="-896.62" y1="-157.48" x2="-904.24" y2="-157.48" width="0.1524" layer="91"/>
+<pinref part="BATT2" gate="G$1" pin="+"/>
 </segment>
 </net>
 <net name="LED7" class="0">
@@ -1478,6 +1637,11 @@
 <wire x1="-774.7" y1="-170.18" x2="-772.16" y2="-170.18" width="0.1524" layer="91"/>
 <label x="-774.7" y="-170.18" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="AVR_ISP1" gate="G$1" pin="1"/>
+<wire x1="-863.6" y1="-215.9" x2="-861.06" y2="-215.9" width="0.1524" layer="91"/>
+<label x="-863.6" y="-215.9" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="LED5" class="0">
 <segment>
@@ -1502,6 +1666,11 @@
 <wire x1="-774.7" y1="-162.56" x2="-772.16" y2="-162.56" width="0.1524" layer="91"/>
 <label x="-774.7" y="-162.56" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="AVR_ISP1" gate="G$1" pin="3"/>
+<wire x1="-861.06" y1="-218.44" x2="-863.6" y2="-218.44" width="0.1524" layer="91"/>
+<label x="-863.6" y="-218.44" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="LED10" class="0">
 <segment>
@@ -1513,6 +1682,11 @@
 <pinref part="LED7" gate="G$1" pin="A"/>
 <wire x1="-774.7" y1="-177.8" x2="-772.16" y2="-177.8" width="0.1524" layer="91"/>
 <label x="-774.7" y="-177.8" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="AVR_ISP1" gate="G$1" pin="4"/>
+<wire x1="-843.28" y1="-218.44" x2="-845.82" y2="-218.44" width="0.1524" layer="91"/>
+<label x="-843.28" y="-218.44" size="1.27" layer="95" font="vector" ratio="10" xref="yes"/>
 </segment>
 </net>
 <net name="LED8" class="0">
@@ -1539,9 +1713,16 @@
 <label x="-774.7" y="-185.42" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$14" class="0">
+<net name="!RESET" class="0">
 <segment>
 <pinref part="MCU1" gate="G$1" pin="(PCINT11/!RESET!/DW/D11)PB3"/>
+<wire x1="-810.26" y1="-185.42" x2="-812.8" y2="-185.42" width="0.1524" layer="91"/>
+<label x="-810.26" y="-185.42" size="1.27" layer="95" font="vector" ratio="10" xref="yes"/>
+</segment>
+<segment>
+<pinref part="AVR_ISP1" gate="G$1" pin="5"/>
+<wire x1="-863.6" y1="-220.98" x2="-861.06" y2="-220.98" width="0.1524" layer="91"/>
+<label x="-863.6" y="-220.98" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$17" class="0">
@@ -1624,6 +1805,14 @@
 <pinref part="SW1" gate="G$1" pin="2"/>
 <pinref part="MCU1" gate="G$1" pin="VCC"/>
 <wire x1="-889" y1="-154.94" x2="-883.92" y2="-154.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VCC" class="0">
+<segment>
+<pinref part="AVR_ISP1" gate="G$1" pin="2"/>
+<wire x1="-843.28" y1="-215.9" x2="-845.82" y2="-215.9" width="0.1524" layer="91"/>
+<wire x1="-843.28" y1="-215.9" x2="-843.28" y2="-213.36" width="0.1524" layer="91"/>
+<pinref part="SUPPLY2" gate="VCC" pin="VCC"/>
 </segment>
 </net>
 </nets>
