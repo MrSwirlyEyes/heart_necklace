@@ -580,7 +580,15 @@
 <connect gate="G$1" pin="VCC" pad="1"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DATASHEET" value="http://ww1.microchip.com/downloads/en/DeviceDoc/doc8183.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=ATTINY84A-SSU-ND" constant="no"/>
+<attribute name="DISTPN" value="ATTINY84A-SSU-ND" constant="no"/>
+<attribute name="MFR" value="Microchip Technology" constant="no"/>
+<attribute name="MPN" value="ATTINY84A-SSU" constant="no"/>
+<attribute name="VALUE" value="ATTiny84" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -1359,6 +1367,42 @@
 <wire x1="0.127" y1="-6.25" x2="6.25" y2="0" width="0.127" layer="51" style="shortdash" curve="90"/>
 <wire x1="6.25" y1="0" x2="0" y2="6.25" width="0.127" layer="51" style="shortdash" curve="90"/>
 </package>
+<package name="CR-2032">
+<circle x="0" y="0" radius="10" width="0.127" layer="21"/>
+<smd name="-" x="0" y="0" dx="5.1" dy="5.1" layer="1" roundness="50"/>
+<smd name="+_2" x="11.45" y="0" dx="2.5" dy="5.5" layer="1" roundness="50"/>
+<smd name="+_1" x="-11.45" y="0" dx="2.5" dy="5.5" layer="1" roundness="50"/>
+<wire x1="-10.6" y1="-5.15" x2="-10.6" y2="-2.55" width="0.127" layer="21"/>
+<wire x1="-10.6" y1="-2.55" x2="-10.6" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="-10.6" y1="-0.55" x2="-10.6" y2="0.55" width="0.127" layer="21"/>
+<wire x1="-10.6" y1="0.55" x2="-10.6" y2="2.55" width="0.127" layer="21"/>
+<wire x1="-10.6" y1="2.55" x2="-10.6" y2="5" width="0.127" layer="21"/>
+<wire x1="-10.6" y1="5" x2="-7.84" y2="7.75" width="0.127" layer="21"/>
+<wire x1="-7.84" y1="7.75" x2="7.84" y2="7.75" width="0.127" layer="21"/>
+<wire x1="7.84" y1="7.75" x2="10.6" y2="5" width="0.127" layer="21"/>
+<wire x1="10.6" y1="5" x2="10.6" y2="0.55" width="0.127" layer="21"/>
+<wire x1="10.6" y1="0.55" x2="10.6" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="10.6" y1="-0.55" x2="10.6" y2="-5.15" width="0.127" layer="21"/>
+<wire x1="10.6" y1="-5.15" x2="8" y2="-7.75" width="0.127" layer="21"/>
+<wire x1="8" y1="-7.75" x2="4" y2="-7.75" width="0.127" layer="21"/>
+<wire x1="4" y1="-7.75" x2="2" y2="-7" width="0.127" layer="21"/>
+<wire x1="2" y1="-7" x2="-2" y2="-7" width="0.127" layer="21"/>
+<wire x1="-2" y1="-7" x2="-4" y2="-7.75" width="0.127" layer="21"/>
+<wire x1="-4" y1="-7.75" x2="-8" y2="-7.75" width="0.127" layer="21"/>
+<wire x1="-8" y1="-7.75" x2="-10.6" y2="-5.15" width="0.127" layer="21"/>
+<wire x1="-10.6" y1="2.55" x2="-11.5" y2="2.55" width="0.127" layer="21"/>
+<wire x1="-11.5" y1="2.55" x2="-11.5" y2="0.55" width="0.127" layer="21"/>
+<wire x1="-11.5" y1="0.55" x2="-10.6" y2="0.55" width="0.127" layer="21"/>
+<wire x1="-10.6" y1="-0.55" x2="-11.5" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="-11.5" y1="-0.55" x2="-11.5" y2="-2.55" width="0.127" layer="21"/>
+<wire x1="-11.5" y1="-2.55" x2="-10.6" y2="-2.55" width="0.127" layer="21"/>
+<wire x1="10.668" y1="2.55" x2="11.5" y2="2.55" width="0.127" layer="21"/>
+<wire x1="11.5" y1="2.55" x2="11.5" y2="0.55" width="0.127" layer="21"/>
+<wire x1="11.5" y1="0.55" x2="10.6" y2="0.55" width="0.127" layer="21"/>
+<wire x1="10.668" y1="-2.55" x2="11.5" y2="-2.55" width="0.127" layer="21"/>
+<wire x1="11.5" y1="-2.55" x2="11.5" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="11.5" y1="-0.55" x2="10.6" y2="-0.55" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="BATTERY_CELL">
@@ -1404,6 +1448,165 @@
 </technology>
 </technologies>
 </device>
+<device name="_SMD_3V_20MM" package="CR-2032">
+<connects>
+<connect gate="G$1" pin="+" pad="+_1 +_2"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="PiB_capacitors">
+<packages>
+<package name="_CER_SMD-805">
+<smd name="1" x="-1" y="0" dx="1" dy="1.45" layer="1" roundness="50"/>
+<smd name="2" x="1" y="0" dx="1" dy="1.45" layer="1" roundness="50"/>
+<wire x1="-1.05" y1="-0.68" x2="-1.05" y2="0.68" width="0.12" layer="51"/>
+<wire x1="-1.05" y1="0.68" x2="1.05" y2="0.68" width="0.12" layer="51"/>
+<text x="0" y="1.3" size="0.6096" layer="25" font="vector" ratio="10" rot="R180" align="center">&gt;NAME</text>
+<text x="0" y="-1.316" size="0.6096" layer="27" font="vector" ratio="10" align="center">&gt;VALUE</text>
+<wire x1="1.05" y1="-0.68" x2="-1.05" y2="-0.68" width="0.12" layer="51"/>
+<wire x1="1.05" y1="0.68" x2="1.05" y2="-0.68" width="0.12" layer="51"/>
+<rectangle x1="-1.1" y1="-0.625" x2="-0.5" y2="0.625" layer="51"/>
+<rectangle x1="0.5" y1="-0.625" x2="1.1" y2="0.625" layer="51"/>
+<wire x1="0.15" y1="0" x2="0.5" y2="0" width="0.1" layer="21"/>
+<wire x1="-0.15" y1="0.45" x2="-0.15" y2="0" width="0.1" layer="21"/>
+<wire x1="-0.15" y1="0" x2="-0.15" y2="-0.45" width="0.1" layer="21"/>
+<wire x1="0.15" y1="0.45" x2="0.15" y2="0" width="0.1" layer="21"/>
+<wire x1="0.15" y1="0" x2="0.15" y2="-0.45" width="0.1" layer="21"/>
+<wire x1="-0.5" y1="0" x2="-0.15" y2="0" width="0.1" layer="21"/>
+<wire x1="-1.778" y1="1.016" x2="-1.778" y2="-1.016" width="0.1" layer="39"/>
+<wire x1="-1.778" y1="-1.016" x2="1.778" y2="-1.016" width="0.1" layer="39"/>
+<wire x1="1.778" y1="-1.016" x2="1.778" y2="1.016" width="0.1" layer="39"/>
+<wire x1="1.778" y1="1.016" x2="-1.778" y2="1.016" width="0.1" layer="39"/>
+<wire x1="-1.651" y1="0.889" x2="-1.651" y2="-0.889" width="0.1" layer="21"/>
+<wire x1="-1.651" y1="-0.889" x2="1.651" y2="-0.889" width="0.1" layer="21"/>
+<wire x1="1.651" y1="-0.889" x2="1.651" y2="0.889" width="0.1" layer="21"/>
+<wire x1="1.651" y1="0.889" x2="-1.651" y2="0.889" width="0.1" layer="21"/>
+</package>
+<package name="_CER_SMD-603">
+<smd name="1" x="-0.975" y="0" dx="0.95" dy="0.95" layer="1" roundness="50"/>
+<smd name="2" x="0.975" y="0" dx="0.95" dy="0.95" layer="1" roundness="50"/>
+<wire x1="-0.8" y1="-0.4" x2="-0.8" y2="0.4" width="0.1" layer="51"/>
+<wire x1="-0.8" y1="0.4" x2="0.8" y2="0.4" width="0.1" layer="51"/>
+<text x="0" y="1.046" size="0.6096" layer="25" font="vector" ratio="10" rot="R180" align="center">&gt;NAME</text>
+<text x="0" y="-1.062" size="0.6096" layer="27" font="vector" ratio="10" align="center">&gt;VALUE</text>
+<wire x1="0.8" y1="-0.4" x2="-0.8" y2="-0.4" width="0.1" layer="51"/>
+<wire x1="0.8" y1="0.4" x2="0.8" y2="-0.4" width="0.1" layer="51"/>
+<rectangle x1="-0.8" y1="-0.4" x2="-0.6" y2="0.4" layer="51"/>
+<rectangle x1="0.6" y1="-0.4" x2="0.8" y2="0.4" layer="51"/>
+<wire x1="0.15" y1="0" x2="0.5" y2="0" width="0.1" layer="21"/>
+<wire x1="-0.15" y1="0.25" x2="-0.15" y2="0" width="0.1" layer="21"/>
+<wire x1="-0.15" y1="0" x2="-0.15" y2="-0.25" width="0.1" layer="21"/>
+<wire x1="0.15" y1="0.25" x2="0.15" y2="0" width="0.1" layer="21"/>
+<wire x1="0.15" y1="0" x2="0.15" y2="-0.25" width="0.1" layer="21"/>
+<wire x1="-0.5" y1="0" x2="-0.15" y2="0" width="0.1" layer="21"/>
+<wire x1="-1.578" y1="0.616" x2="-1.578" y2="-0.616" width="0.1" layer="39"/>
+<wire x1="-1.578" y1="-0.616" x2="1.578" y2="-0.616" width="0.1" layer="39"/>
+<wire x1="1.578" y1="-0.616" x2="1.578" y2="0.616" width="0.1" layer="39"/>
+<wire x1="1.578" y1="0.616" x2="-1.578" y2="0.616" width="0.1" layer="39"/>
+<wire x1="-1.551" y1="0.589" x2="-1.551" y2="-0.589" width="0.1" layer="21"/>
+<wire x1="-1.551" y1="-0.589" x2="1.551" y2="-0.589" width="0.1" layer="21"/>
+<wire x1="1.551" y1="-0.589" x2="1.551" y2="0.589" width="0.1" layer="21"/>
+<wire x1="1.551" y1="0.589" x2="-1.551" y2="0.589" width="0.1" layer="21"/>
+</package>
+<package name="_CER_SMD_0402">
+<smd name="1" x="-0.425" y="0" dx="0.6" dy="0.55" layer="1" roundness="50"/>
+<smd name="2" x="0.425" y="0" dx="0.6" dy="0.55" layer="1" roundness="50"/>
+<wire x1="-0.5" y1="-0.25" x2="-0.5" y2="0.25" width="0.05" layer="51"/>
+<wire x1="-0.5" y1="0.25" x2="0.5" y2="0.25" width="0.05" layer="51"/>
+<text x="0" y="0.792" size="0.6096" layer="25" font="vector" ratio="10" rot="R180" align="center">&gt;NAME</text>
+<text x="0" y="-0.808" size="0.4064" layer="27" font="vector" ratio="10" align="center">&gt;VALUE</text>
+<wire x1="0.5" y1="-0.25" x2="-0.5" y2="-0.25" width="0.05" layer="51"/>
+<wire x1="0.5" y1="0.25" x2="0.5" y2="-0.25" width="0.05" layer="51"/>
+<rectangle x1="-0.5" y1="-0.25" x2="-0.3" y2="0.25" layer="51"/>
+<rectangle x1="0.3" y1="-0.25" x2="0.5" y2="0.25" layer="51"/>
+<wire x1="-0.878" y1="0.416" x2="-0.878" y2="-0.416" width="0.1" layer="39"/>
+<wire x1="-0.878" y1="-0.416" x2="0.878" y2="-0.416" width="0.1" layer="39"/>
+<wire x1="0.878" y1="-0.416" x2="0.878" y2="0.416" width="0.1" layer="39"/>
+<wire x1="0.878" y1="0.416" x2="-0.878" y2="0.416" width="0.1" layer="39"/>
+<wire x1="-0.851" y1="0.389" x2="-0.851" y2="-0.389" width="0.1" layer="21"/>
+<wire x1="-0.851" y1="-0.389" x2="0.851" y2="-0.389" width="0.1" layer="21"/>
+<wire x1="0.851" y1="-0.389" x2="0.851" y2="0.389" width="0.1" layer="21"/>
+<wire x1="0.851" y1="0.389" x2="-0.851" y2="0.389" width="0.1" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="CAPACITOR_NON-POLARIZED">
+<wire x1="2.54" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<pin name="1" x="0" y="2.54" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<text x="0" y="-0.762" size="0.8128" layer="95" font="vector" ratio="10" align="center">&gt;NAME</text>
+<text x="0" y="-1.778" size="0.8128" layer="96" font="vector" ratio="10" align="center">&gt;VALUE</text>
+<wire x1="-2.54" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="10UF" prefix="C" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="CAPACITOR_NON-POLARIZED" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_CER_SMD-805_25V-10%" package="_CER_SMD-805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="CREATOR" value="MrSwirlyEyes" constant="no"/>
+<attribute name="DATASHEET" value="http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E106KA73-01.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM21BR61E106KA73K/490-16824-1-ND/7595732" constant="no"/>
+<attribute name="DISTPN" value="490-16824-1-ND" constant="no"/>
+<attribute name="MFR" value="Murata Electronics North America" constant="no"/>
+<attribute name="MPN" value="GRM21BR61E106KA73K" constant="no"/>
+<attribute name="TESTED" value="NO" constant="no"/>
+<attribute name="VALUE" value="10uF/25V" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_CER_SMD-603_16V-10%" package="_CER_SMD-603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="CREATOR" value="MrSwirlyEyes" constant="no"/>
+<attribute name="DATASHEET" value="http://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRT188R61C106KE13-01.pdf" constant="no"/>
+<attribute name="DIST" value="Digkey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=490-12317-1-ND" constant="no"/>
+<attribute name="DISTPN" value="490-12317-1-ND" constant="no"/>
+<attribute name="MFR" value="Murata Electronics North America" constant="no"/>
+<attribute name="MPN" value="GRT188R61C106KE13D" constant="no"/>
+<attribute name="VALUE" value="10uF/16V" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_CER_SMD-0402_10V-20%" package="_CER_SMD_0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="CREATOR" value="MrSwirlyEyes" constant="no"/>
+<attribute name="DATASHEET" value="http://www.samsungsem.com/kr/support/product-search/mlcc/__icsFiles/afieldfile/2017/07/28/S_CL05A106MP5NUNC.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=1276-1450-1-ND" constant="no"/>
+<attribute name="DISTPN" value="1276-1450-1-ND" constant="no"/>
+<attribute name="MFR" value="Samsung Electro-Mechanics" constant="no"/>
+<attribute name="MPN" value="CL05A106MP5NUNC" constant="no"/>
+<attribute name="VALUE" value="10uF/10V" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 </devicesets>
@@ -1439,11 +1642,15 @@
 <part name="R5" library="PiB_resistors" deviceset="1KΩ" device="_SMD-0805_1/8W-5%" value="1KΩ"/>
 <part name="R4" library="PiB_resistors" deviceset="1KΩ" device="_SMD-0805_1/8W-5%" value="1KΩ"/>
 <part name="GND2" library="PiB_power_symbols" deviceset="GND" device=""/>
-<part name="MCU1" library="PiB_ic_microcontrollers" deviceset="ATTINY84" device="_SO-14_NO-SILK" value="ATTINY84"/>
+<part name="MCU1" library="PiB_ic_microcontrollers" deviceset="ATTINY84" device="_SO-14_NO-SILK" value="ATTiny84"/>
 <part name="SW1" library="PiB_switches" deviceset="SWITCH_SPDT" device="_RA_SMD_300MA-4V_6.7L-2.6W" value="300mA/4V"/>
 <part name="GND1" library="PiB_power_symbols" deviceset="GND" device=""/>
 <part name="GND3" library="PiB_power_symbols" deviceset="GND" device=""/>
-<part name="BATT2" library="PiB_batteries" deviceset="BATTERY_COIN-CELL" device="_SMD_3V_12.5MM" value="BR-1225/3V/48mAh"/>
+<part name="BATT1" library="PiB_batteries" deviceset="BATTERY_COIN-CELL" device="_SMD_3V_20MM"/>
+<part name="C1" library="PiB_capacitors" deviceset="10UF" device="_CER_SMD-0402_10V-20%" value="10uF/10V"/>
+<part name="GND4" library="PiB_power_symbols" deviceset="GND" device=""/>
+<part name="C2" library="PiB_capacitors" deviceset="10UF" device="_CER_SMD-0402_10V-20%" value="10uF/10V"/>
+<part name="GND5" library="PiB_power_symbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1454,12 +1661,12 @@
 <wire x1="-741.68" y1="-213.36" x2="-741.68" y2="-124.46" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-741.68" y1="-124.46" x2="-787.4" y2="-124.46" width="0.1524" layer="97" style="shortdash"/>
 <text x="-762" y="-121.92" size="7.62" layer="97" font="vector" ratio="20" align="bottom-center">LEDS</text>
-<wire x1="-914.4" y1="-144.78" x2="-914.4" y2="-198.12" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="-914.4" y1="-198.12" x2="-797.56" y2="-198.12" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="-924.56" y1="-144.78" x2="-924.56" y2="-198.12" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="-924.56" y1="-198.12" x2="-797.56" y2="-198.12" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="-797.56" y1="-198.12" x2="-797.56" y2="-144.78" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="-797.56" y1="-144.78" x2="-914.4" y2="-144.78" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="-797.56" y1="-144.78" x2="-924.56" y2="-144.78" width="0.1524" layer="97" style="shortdash"/>
 <text x="-853.44" y="-142.24" size="7.62" layer="97" font="vector" ratio="20" align="bottom-center">ATTINY84</text>
-<text x="-896.62" y="-152.4" size="1.27" layer="97" font="vector" ratio="10" rot="MR0">NC</text>
+<text x="-906.78" y="-152.4" size="1.27" layer="97" font="vector" ratio="10" rot="MR0">NC</text>
 <text x="-800.1" y="-165.1" size="1.27" layer="91" font="vector" ratio="10">SCK</text>
 <text x="-800.1" y="-167.64" size="1.27" layer="91" font="vector" ratio="10">MISO</text>
 <text x="-800.1" y="-170.18" size="1.27" layer="91" font="vector" ratio="10">MOSI</text>
@@ -1486,12 +1693,16 @@
 <instance part="R6" gate="G$1" x="-756.92" y="-170.18" rot="MR0"/>
 <instance part="R5" gate="G$1" x="-756.92" y="-162.56" rot="MR0"/>
 <instance part="R4" gate="G$1" x="-756.92" y="-154.94" rot="MR0"/>
-<instance part="GND2" gate="GND" x="-904.24" y="-172.72"/>
+<instance part="GND2" gate="GND" x="-914.4" y="-172.72"/>
 <instance part="MCU1" gate="G$1" x="-848.36" y="-170.18"/>
-<instance part="SW1" gate="G$1" x="-891.54" y="-154.94" rot="R180"/>
+<instance part="SW1" gate="G$1" x="-904.24" y="-152.4"/>
 <instance part="GND1" gate="GND" x="-749.3" y="-205.74"/>
 <instance part="GND3" gate="GND" x="-886.46" y="-190.5"/>
-<instance part="BATT2" gate="G$1" x="-904.24" y="-162.56"/>
+<instance part="BATT1" gate="G$1" x="-914.4" y="-162.56"/>
+<instance part="C1" gate="G$1" x="-886.46" y="-157.48"/>
+<instance part="GND4" gate="GND" x="-886.46" y="-165.1"/>
+<instance part="C2" gate="G$1" x="-894.08" y="-157.48"/>
+<instance part="GND5" gate="GND" x="-894.08" y="-165.1"/>
 </instances>
 <busses>
 </busses>
@@ -1499,8 +1710,8 @@
 <net name="GND" class="0">
 <segment>
 <pinref part="GND2" gate="GND" pin="GND"/>
-<wire x1="-904.24" y1="-167.64" x2="-904.24" y2="-170.18" width="0.1524" layer="91"/>
-<pinref part="BATT2" gate="G$1" pin="-"/>
+<wire x1="-914.4" y1="-167.64" x2="-914.4" y2="-170.18" width="0.1524" layer="91"/>
+<pinref part="BATT1" gate="G$1" pin="-"/>
 </segment>
 <segment>
 <wire x1="-749.3" y1="-132.08" x2="-749.3" y2="-139.7" width="0.1524" layer="91"/>
@@ -1550,13 +1761,21 @@
 <pinref part="MCU1" gate="G$1" pin="GND"/>
 <wire x1="-886.46" y1="-185.42" x2="-883.92" y2="-185.42" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="GND4" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="GND5" gate="GND" pin="GND"/>
+</segment>
 </net>
 <net name="VBATT" class="0">
 <segment>
-<wire x1="-904.24" y1="-160.02" x2="-904.24" y2="-157.48" width="0.1524" layer="91"/>
-<pinref part="SW1" gate="G$1" pin="1"/>
-<wire x1="-896.62" y1="-157.48" x2="-904.24" y2="-157.48" width="0.1524" layer="91"/>
-<pinref part="BATT2" gate="G$1" pin="+"/>
+<wire x1="-914.4" y1="-160.02" x2="-914.4" y2="-152.4" width="0.1524" layer="91"/>
+<pinref part="BATT1" gate="G$1" pin="+"/>
+<pinref part="SW1" gate="G$1" pin="2"/>
+<wire x1="-906.78" y1="-152.4" x2="-914.4" y2="-152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED7" class="0">
@@ -1763,9 +1982,15 @@
 </net>
 <net name="N$11" class="0">
 <segment>
-<pinref part="SW1" gate="G$1" pin="2"/>
+<pinref part="SW1" gate="G$1" pin="3"/>
 <pinref part="MCU1" gate="G$1" pin="VCC"/>
-<wire x1="-889" y1="-154.94" x2="-883.92" y2="-154.94" width="0.1524" layer="91"/>
+<wire x1="-899.16" y1="-154.94" x2="-894.08" y2="-154.94" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="-894.08" y1="-154.94" x2="-886.46" y2="-154.94" width="0.1524" layer="91"/>
+<wire x1="-886.46" y1="-154.94" x2="-883.92" y2="-154.94" width="0.1524" layer="91"/>
+<junction x="-886.46" y="-154.94"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<junction x="-894.08" y="-154.94"/>
 </segment>
 </net>
 </nets>
