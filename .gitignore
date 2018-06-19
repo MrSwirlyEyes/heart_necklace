@@ -1,6 +1,6 @@
 eagle.epf
-.b#[1-9]
-.s#[1-9]
+*.b#[1-9]
+*.s#[1-9]
 .DS_Store
 Thumbs.db
 *.lck
